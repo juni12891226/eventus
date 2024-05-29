@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_udid/flutter_udid.dart';
 
 class EventusUtil {
-  void postEvent() async {
+ static void postEvent() async {
     await _getDeviceId();
   }
 
-  Future<String> _getDeviceId() async {
+ static Future<String> _getDeviceId() async {
     String udid = await FlutterUdid.udid;
     debugPrint("eventusX:::DeviceId:::$udid");
     return udid;
